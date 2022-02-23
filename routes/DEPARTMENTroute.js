@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../../db/connection');
-
+const db = require('../db/Connection');
+const inputCheck = require('../Utl/InputCheck')
 
 //all  departments
 router.get(`SELECT * FROM ALL departments`, (err, row) => {

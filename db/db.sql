@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS walmart;
+CREATE DATABASE walmart;
+USE walmart;

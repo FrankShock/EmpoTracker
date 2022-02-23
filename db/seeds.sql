@@ -1,7 +1,7 @@
 INSERT INTO department (name)
 VALUES
 ('Associates'),
-('Invetory Reps'),
+('Inventory Reps'),
 ('Department Managers'),
 ('Assistant Managers'),
 ('Store Manager');
@@ -9,7 +9,7 @@ VALUES
 INSERT INTO role (title, salary, department_id)
 VALUES
 ('Associates',37000, 1),
-('Invetory Reps',40000, 2),
+('Inventory Reps',40000, 2),
 ('Department Managers',50000, 3),
 ('Assistant Managers', 67000, 4),
 ('Store Manager', 85000, 5);
