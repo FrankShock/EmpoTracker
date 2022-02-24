@@ -14,7 +14,7 @@ VALUES
 ('Assistant Managers', 67000, 4),
 ('Store Manager', 85000, 5);
 
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
+INSERT INTO employees (first_name, last_name, role_id, manager_id)
 VALUES
 ('John', 'Lennon', 1,  null),
 ('George', 'Harrison', 1,  null),

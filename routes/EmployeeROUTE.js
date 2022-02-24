@@ -24,7 +24,7 @@ router.get(`SELECT * FROM ALL employees`, (err, row) => {
   });
 
   //create an employee
-router.post('/employee', ({ body }, res) => {
+router.post('/employees', ({ body }, res) => {
     const errors = inputCheck(
       body,
       'first_name',
@@ -38,7 +38,7 @@ router.post('/employee', ({ body }, res) => {
       return;
     }
   
-    const sql = `INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?,?,?,?)`;
+    const sql = `INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES (?,?,?,?)`;
     const params = [
       body.first_name,
       body.last_name,
@@ -60,7 +60,7 @@ router.post('/employee', ({ body }, res) => {
   });
 
   //update role ID 
-  router.put('/employee/:role_id', (req, res) => {
+  router.put('/employees/:role_id', (req, res) => {
     const errors = inputCheck(req.body, 'role_id');
     if (errors) {
       res.status(400).json({ error: errors });
@@ -88,7 +88,7 @@ router.post('/employee', ({ body }, res) => {
   });
 
   //Update Manager ID
-  router.put('/employee/:manager_id', (req, res) => {
+  router.put('/employees/:manager_id', (req, res) => {
     const errors = inputCheck(req.body, 'manager_id');
     if (errors) {
       res.status(400).json({ error: errors });
